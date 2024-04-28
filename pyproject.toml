@@ -1,0 +1,25 @@
+[project]
+name = "dixp"
+version = "0.1.0"
+description = "Add your description here"
+authors = [{ name = "motty", email = "motty.mio2@gmail.com" }]
+dependencies = ["click>=8.1.7"]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.scripts]
+dixp = "dixp.func:exporter"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dixp"]
